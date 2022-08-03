@@ -1,0 +1,33 @@
+.tasks{
+    width: 80%;
+    margin: 30px auto;
+}
+
+nav{
+    max-width: 800px;
+    margin: auto;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.active{ border-bottom: 2px solid #00fe;}
+
+textarea{ resize: none; }
+
+footer{
+    text-align: center;
+    color: #aaa;
+}

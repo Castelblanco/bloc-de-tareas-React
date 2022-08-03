@@ -1,0 +1,42 @@
+.task{
+    margin: 10px auto;
+    padding: 10px 5px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.task > h2{ margin: 0;}
+
+.desc{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.desc > div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.check, .x{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.btns > button > img{ width: 100%; }
+
+.check{ background-color: #0f0; }
+
+.check:hover{ background-color: #0f0a; }
+
+.x{ background-color: #f00; }
+
+.x:hover{ background-color: #e00; }

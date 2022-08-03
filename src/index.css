@@ -1,0 +1,6 @@
+*{ font-family: sans-serif; }
+
+input, button, textarea{
+    border: none;
+    outline: none;
+}
