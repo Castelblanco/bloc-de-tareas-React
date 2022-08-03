@@ -26,47 +26,27 @@ export default function Tasks(props){
 
     return(
         <Fragment>
-            {tasks !== null ? tasks.map(i =>{
+            {tasks !== null
+            ? tasks.filter(i => i.status === filter || filter === undefined).map(i =>{
                 let bg = i.status ? "#06f" : "#f13d";
-
-                if (i.status === filter){
-                    return(
-                        <div style={{background: bg}} className="task" key={i.id}>
-                            <h2>{ i.name }</h2>
-                            <div className="desc">
-                                <p>{ i.desc }</p>
-                                <div className="btns">
-                                    <button onClick={()=>checkTask(i.id)} className="check">
-                                        <img src={Check} alt="Check"/>
-                                    </button>
-                                    <button onClick={()=> deleteTask(i.id)} className="x">
-                                        <img src={X} alt="X"/>
-                                    </button>
-                                </div>
+                return(
+                    <div style={{background: bg}} className="task" key={i.id}>
+                        <h2>{ i.name }</h2>
+                        <div className="desc">
+                            <p>{ i.desc }</p>
+                            <div className="btns">
+                                <button onClick={()=>checkTask(i.id)} className="check">
+                                    <img src={Check} alt="Check"/>
+                                </button>
+                                <button onClick={()=> deleteTask(i.id)} className="x">
+                                    <img src={X} alt="X"/>
+                                </button>
                             </div>
                         </div>
-                    );
-
-                }else if (filter === undefined){
-                    return(
-                        <div style={{background: bg}} className="task" key={i.id}>
-                            <h2>{ i.name }</h2>
-                            <div className="desc">
-                                <p>{ i.desc }</p>
-                                <div className="btns">
-                                    <button onClick={()=>checkTask(i.id)} className="check">
-                                        <img src={Check} alt="Check"/>
-                                    </button>
-                                    <button onClick={()=> deleteTask(i.id)} className="x">
-                                        <img src={X} alt="X"/>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                }
+                    </div>
+                );
             })
-            : ""}
+            : <div className="div_none"></div>}
         </Fragment>
     );
 }

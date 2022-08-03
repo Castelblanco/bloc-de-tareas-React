@@ -1,3 +1,7 @@
+.div_none{
+    display: none;
+}
+
 .task{
     margin: 10px auto;
     padding: 10px 5px;
